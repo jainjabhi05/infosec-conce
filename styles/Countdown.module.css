@@ -1,0 +1,70 @@
+.timerContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+ul.timer {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+ul.timer span {
+  display: block;
+}
+
+ul.timer > li {
+  width: 220px;
+  margin: 10px 10px;
+}
+
+.countdownArc {
+  overflow: visible;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.countdownArc path {
+  stroke: white;
+}
+
+.countdownArc circle {
+  stroke: rgba(255, 255, 255, 20%);
+}
+
+.countdownArc text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+  fill: white;
+}
+
+.countdownArc text:first-of-type {
+  transform: translateY(-0.17em);
+  font-size: x-large;
+}
+
+.countdownArc text:last-of-type {
+  transform: translateY(1.41em);
+  font-size: xx-small;
+  font-weight: 300;
+}
+
+@media (max-width: 800px) {
+  .timerContainer {
+    padding: 0 1rem;
+  }
+
+  ul.timer > li {
+    margin: 0px;
+  }
+
+  .countdownArc {
+    stroke-width: 4;
+  }
+}

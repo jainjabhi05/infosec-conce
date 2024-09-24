@@ -1,0 +1,30 @@
+{
+  "name": "lactf-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "yarn prettier -c pages/*.js styles/*.css components/*.js",
+    "fix": "yarn prettier -w pages/*.js styles/*.css components/*.js",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "dependencies": {
+    "next": "12.1.6",
+    "next-seo": "^6.5.0",
+    "prettier": "^2.7.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.31.2"
+  },
+  "devDependencies": {
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6",
+    "husky": "^8.0.1"
+  },
+  "packageManager": "yarn@3.6.3"
+}

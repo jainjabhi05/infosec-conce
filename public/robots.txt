@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://lactf.uclaacm.com/sitemap.xml
