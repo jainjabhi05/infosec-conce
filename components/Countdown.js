@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
-
 import styles from "../styles/Countdown.module.css";
 
 const Countdown = () => {
+  // Set the future date to 30 days (1 month) from now
+  const futureTime = Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60;
+
   let [time, setTime] = useState(0);
 
-  let updateTime = () => setTime(Math.max(1708142400 - Date.now() / 1000, 0));
+  // Update time function, subtracting the current time from the future time
+  let updateTime = () => setTime(Math.max(futureTime - Date.now() / 1000, 0));
+
   useEffect(() => {
     if (time === 0) updateTime();
-    setInterval(updateTime, 5000);
+    const interval = setInterval(updateTime, 5000);
+
+    return () => clearInterval(interval); // Clean up the interval on unmount
   }, [time]);
 
   return (
